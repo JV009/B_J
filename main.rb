@@ -114,6 +114,8 @@ class Interface
       @user.add_points(1)
     elsif @user.cards[0][0].include?('T') && (@user.points + card[0][0]) > 21
       @user.add_points(-10 + card[0][0])
+     elsif @user.cards[1][0].include?('T') && (@user.points + card[0][0]) > 21
+      @user.add_points(-10 + card[0][0])
     else
       @user.add_points(card[0][0])
     end
