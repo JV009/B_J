@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 require_relative 'players_methods'
 
 class Dealer
-	include PlayersMethods
+  include PlayersMethods
 
-	attr_accessor :bank
+  attr_accessor :bank
 
-	def initialize
-		@name = "Dealer"
-		@bank = 100
-		@cards = []
-		@points = 0
-	end
+  def initialize
+    @name = 'Dealer'
+    @bank = 100
+    @cards = []
+    @points = 0
+  end
 end
