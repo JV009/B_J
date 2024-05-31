@@ -3,7 +3,7 @@ require_relative 'players_methods'
 class User
 	include PlayersMethods
 
-	attr_accessor :bank
+	attr_accessor :bank, :name
 
 	def initialize(name)
 		@name = name

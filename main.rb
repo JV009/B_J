@@ -110,6 +110,8 @@ class Interface
 		@user.cards << card[0][1]
 		if card[0][1].include?("T") && (@user.points + card[0][0]) > 21
 			@user.add_points(1)
+		elsif card[0][1].include?("T") && (@user.points + card[0][0].include?("T")) > 21
+			@user.add_points(-9)
 		else
 			@user.add_points(card[0][1])
 		end
@@ -163,5 +165,3 @@ class Interface
 		end
 	end		
 end
-
-
